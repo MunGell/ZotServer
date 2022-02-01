@@ -1,4 +1,4 @@
-import Search from './methods/search';
+import Search from './endpoints/Search';
 
 export default class ZotServer {
 

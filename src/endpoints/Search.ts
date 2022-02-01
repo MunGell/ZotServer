@@ -1,4 +1,7 @@
-export default class Search {
+import EndpointInterface from "../types/EndpointInterface";
+
+// @todo: consider auth login through abstract class
+export default class Search implements EndpointInterface {
     // @todo: move those into either decorators or interface
     supportedMethods = ['POST'];
     supportedDataTypes = ['application/json'];
@@ -8,7 +11,7 @@ export default class Search {
         // @todo: validate request data
         const searchResults = await this.search(request.data);
         const items = await Zotero.Items.getAsync(searchResults);
-        // @todo: generalize response here
+        // @todo: improve response handing
         return [200, 'application/json', JSON.stringify(items)];
     }
 
