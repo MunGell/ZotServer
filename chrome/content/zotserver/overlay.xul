@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<overlay id="zotserver-overlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<!-- Include the main extension logic -->
+	<script src="chrome://zotero/content/include.js"/>
+	<script>
+        // Only create main object once
+        if (!Zotero.ZotServer) {
+            var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
+                .getService(Components.interfaces.mozIJSSubScriptLoader);
+            loader.loadSubScript("chrome://zotserver/content/main.js");
+        }
+        // Start server
+        window.addEventListener('load', function (e) {
+            Zotero.ZotServer.start();
+        }, false);
+    </script>
+</overlay>

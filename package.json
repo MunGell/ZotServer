@@ -1,0 +1,17 @@
+{
+    "name": "zotserver",
+    "version": "1.0.0",
+    "description": "Zotero Local Server",
+    "private": true,
+    "repository": "https://github.com/MunGell/ZotServer",
+    "author": "Shmavon Gazanchyan <sgazanchyan@gmail.com> (https://github.com/MunGell)",
+    "license": "MIT",
+    "scripts": {
+        "build": "esbuild src/main.ts --bundle --outfile=chrome/content/zotserver/main.js",
+        "watch": "esbuild src/main.ts --bundle --outfile=chrome/content/zotserver/main.js --watch"
+    },
+    "devDependencies": {
+        "esbuild": "^0.14.15",
+        "typescript": "^4.5.5"
+    }
+}
