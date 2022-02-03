@@ -29,7 +29,7 @@ jobs:
         run: echo "::set-output name=version::$(make version)"
         id: version
       - name: verify version
-        run: if [ "${{ github.ref }}" != "${{ steps.version.outputs.version }}" ]; then exit 1; fi
+        run: if [ "${{ github.ref_name }}" != "${{ steps.version.outputs.version }}" ]; then exit 1; fi
       - name: build artifacts
         run: make
       - name: release
