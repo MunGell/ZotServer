@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-		xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+        xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
-	<Description about="urn:mozilla:install-manifest">
-		<em:id>zotserver@gazanchyan.com</em:id>
-		<em:name>Zotero Local Server</em:name>
-		<em:version>1.0.0</em:version>
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>zotserver@gazanchyan.com</em:id>
+        <em:name>Zotero Local Server</em:name>
+        <em:version>1.0.0</em:version>
         <em:type>2</em:type> <!-- type=extension -->
         <em:multiprocessCompatible>true</em:multiprocessCompatible>
-		<!-- <em:description></em:description> -->
-		<em:creator>Shmavon Gazanchyan</em:creator>
+        <!-- <em:description></em:description> -->
+        <em:creator>Shmavon Gazanchyan</em:creator>
         <em:homepageURL>http://github.com/MunGell/ZotServer</em:homepageURL>
         <!-- <em:optionsURL>chrome://zotfile/content/options.xul</em:optionsURL> -->
-		<em:updateURL>https://raw.githubusercontent.com/mungell/ZotServer/master/update.rdf</em:updateURL>
+        <em:updateURL>https://raw.githubusercontent.com/mungell/ZotServer/master/update.rdf</em:updateURL>
 
-		<!-- Requires Zotero -->
-		<em:requires>
-			<Description>
-				<em:id>zotero@chnm.gmu.edu</em:id>
-				<em:name>Zotero</em:name>
-				<em:homepageURL>http://www.zotero.org</em:homepageURL>
-				<em:minVersion>3.0</em:minVersion>
-				<em:maxVersion>4.0.*</em:maxVersion>
-			</Description>
-		</em:requires>
+        <!-- Requires Zotero -->
+        <em:requires>
+            <Description>
+                <em:id>zotero@chnm.gmu.edu</em:id>
+                <em:name>Zotero</em:name>
+                <em:homepageURL>http://www.zotero.org</em:homepageURL>
+                <em:minVersion>3.0</em:minVersion>
+                <em:maxVersion>4.0.*</em:maxVersion>
+            </Description>
+        </em:requires>
 
-		<em:targetApplication>
+        <em:targetApplication>
             <Description>
                 <em:id>zotero@chnm.gmu.edu</em:id>
                 <em:minVersion>5.0.0</em:minVersion>
@@ -39,6 +39,6 @@
                 <em:maxVersion>6.0.*</em:maxVersion>
             </Description>
         </em:targetApplication>
-	</Description>
+    </Description>
 </RDF>
 

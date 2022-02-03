@@ -1,0 +1,53 @@
+name: release
+
+on:
+  push:
+    tags: ['*']
+
+jobs:
+  release:
+    name: release
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: node version ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: npm install
+        run: npm install --no-optional
+      - name: npm build
+        run: npm run build
+      - name: version
+        run: echo "::set-output name=version::$(make version)"
+        id: version
+      - name: verify version
+        run: if [ "${{ github.ref }}" != "${{ steps.version.outputs.version }}" ]; then exit 1; fi
+      - name: build artifacts
+        run: make
+      - name: release
+        uses: actions/create-release@v1
+        id: release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: upload build
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: ./zotserver-${{ steps.version.outputs.version }}.xpi
+          asset_name: zotserver-${{ steps.version.outputs.version }}.xpi
+          asset_content_type: application/gzip

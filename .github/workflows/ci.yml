@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   push:
@@ -8,16 +8,17 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [14.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Node version ${{ matrix.node-version }}
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: node version ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
