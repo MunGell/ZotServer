@@ -1,4 +1,4 @@
-import EndpointInterface from "../types/EndpointInterface";
+import EndpointInterface from '../types/EndpointInterface';
 
 // @todo: consider auth login through abstract class
 export default class Search implements EndpointInterface {
@@ -21,7 +21,7 @@ export default class Search implements EndpointInterface {
 
         // @todo: make all "everything" queries be "contains"
         // @todo: docs on possible conditions and operators wouldn't hurt here
-        conditions.forEach(({ condition, operator = 'contains', value, required }) => {
+        conditions.forEach(({ condition, operator = 'contains', value, required = true}) => {
             s.addCondition(condition, operator, value, required)
         });
 
