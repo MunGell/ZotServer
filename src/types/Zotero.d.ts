@@ -1,1 +1,1 @@
-declare var Zotero: any;
+declare const Zotero: any;
