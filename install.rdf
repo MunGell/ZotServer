@@ -5,7 +5,7 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>zotserver@gazanchyan.com</em:id>
         <em:name>Zotero Local Server</em:name>
-        <em:version>1.0.0</em:version>
+        <em:version>0.1.0</em:version>
         <em:type>2</em:type> <!-- type=extension -->
         <em:multiprocessCompatible>true</em:multiprocessCompatible>
         <!-- <em:description></em:description> -->
