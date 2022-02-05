@@ -4,11 +4,11 @@
 
     <Description about="urn:mozilla:install-manifest">
         <em:id>zotserver@gazanchyan.com</em:id>
-        <em:name>Zotero Local Server</em:name>
+        <em:name>ZotServer</em:name>
         <em:version>0.1.1</em:version>
         <em:type>2</em:type> <!-- type=extension -->
         <em:multiprocessCompatible>true</em:multiprocessCompatible>
-        <!-- <em:description></em:description> -->
+        <em:description>Zotero Local Server for third-party integrations</em:description>
         <em:creator>Shmavon Gazanchyan</em:creator>
         <em:homepageURL>http://github.com/MunGell/ZotServer</em:homepageURL>
         <!-- <em:optionsURL>chrome://zotfile/content/options.xul</em:optionsURL> -->
