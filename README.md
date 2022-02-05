@@ -6,6 +6,16 @@ This is a convenient way to integrate Zotero with other desktop applications tha
 My motivation for development of this addon is to connect my note-taking software to Zotero database without active internet connection.
 I am working on a connector that will allow me to quickly search and link to Zotero items right from the text editor.
 
+## Installation
+
+1. Download lastest stable version of the addon from [GitHub release page of this repository](https://github.com/MunGell/ZotServer/releases/)
+2. Use "Install addon from file" menu link in Zotero and select the downloaded `.xpi` file
+
+> How to find "Install addon from file" option:
+> 1. Go to "Tools" menu, click on "Add-ons" option
+> 2. Click on a cog icon on top right corner
+> 3. There now should be "Install Add-on From File" option
+
 ## Alternatives
 
 Zotero already provides a couple of ways to access its database:
