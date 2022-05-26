@@ -4,7 +4,7 @@ ZotServer provides locally accessible HTTP API.
 This is a convenient way to integrate Zotero with other desktop applications that require access to its database.
 
 My motivation for development of this addon is to connect my note-taking software to Zotero database without active internet connection.
-I am working on a connector that will allow me to quickly search and link to Zotero items right from the text editor.
+I am working on a [connector](https://github.com/MunGell/obsidian-zotero) that will allow me to quickly search and link to Zotero items right from the text editor.
 
 ## Installation
 
