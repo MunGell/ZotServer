@@ -22,6 +22,7 @@ Zotero already provides a couple of ways to access its database:
 
 1. [Direct access to SQLite database](https://www.zotero.org/support/dev/client_coding/direct_sqlite_database_access)
 2. [Web API of Zotero Storage service](https://www.zotero.org/support/dev/web_api/v3/start)
+3. [zotero-api-endpoint](https://github.com/Dominic-DallOsto/zotero-api-endpoint) plugin team is working on the similar functionality
 
 ZotServer addon provides a third way with local-only HTTP API that uses [JavaSceript API](https://www.zotero.org/support/dev/client_coding/javascript_api) internally.
 
@@ -145,6 +146,8 @@ Here is my command to run Zotero in development mode that you might find useful:
 ```sh
 /Applications/Zotero.app/Contents/MacOS/zotero -p <your-development-profile-name> -ZoteroDebugText -jsconsole -purgecache
 ```
+
+For questions or help requests please join Gitter room: https://gitter.im/ZotServer/community
 
 Your contributions are highly appreciated!
 
